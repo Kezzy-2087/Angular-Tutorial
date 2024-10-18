@@ -1,0 +1,73 @@
+<!-- interpolation {{}}
+<div class="row">
+    <div class="col-3">
+        <p>{{projectName}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{angularVersion}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{currentDate}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{selectedState}}</p>
+    </div>
+</div>
+
+property binding []
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="projectName" class="form-control"/>
+    </div>   
+    <div class="col-3">
+        <input [type] = "inputType"/>
+    </div>
+two way data binding  [(ngModel)]
+    <div class="col-3">
+        <input type = "text" [(ngModel)] ="projectName"/>
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedState">
+            <option value="Abj">Abuja</option>
+            <option value="Las">Lagos</option>
+            <option value="Kad">Kaduna</option>
+        </select>
+    </div>
+
+    event binding    
+    <div class="row">
+        <div class="col-3">
+            <button class="btn btn-success" (click)="welcomeAlert()">Show Alert</button>
+        </div>
+
+        <div class="col-3">
+            <button class="btn btn-success" (click)="showMesage('What\'s up man!')">Show Greeting</button>
+        </div>
+
+        <div class="col-3">
+            <button class="btn btn-success" (click)="showMesage('Heyyo!')">Show Hey</button>
+        </div>
+    </div>
+</div>
+ -->
+
+ <div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>SN</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of roleList; let SN = index">
+                    <td>{{SN +1}}</td>
+                    <td>{{role.role}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+        
+    </div>
+ </div>
